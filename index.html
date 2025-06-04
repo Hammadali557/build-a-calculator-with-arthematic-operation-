@@ -3,324 +3,310 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>HAMMAD ALI - Portfolio</title>
+<title>Modern Calculator</title>
 <style>
-  /* Google Fonts Import */
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
-  * {
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-  }
-  body {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background: lch(93.52% 7.93 198.96 / 0.897);
-    color: #0adb1c;
-  }
-  /* Navigation */
-  nav {
-    position: sticky;
-    top: 0;
-    background: #0c10f1ef;
-    display: flex;
-    justify-content: center;
-    padding: 15px 0;
-    z-index: 1000;
-    box-shadow: 0 2px 8px rgba(26,26,46,0.8);
-  }
-  nav a {
-    color: hwb(180 95% 5%);
-    margin: 0 20px;
-    text-decoration: none;
-    font-weight: 500;
-    padding: 5px 10px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-  }
-  nav a:hover, nav a.active {
-    background-color: #17f4fc;
-  }
-  /* Container */
-  .container {
-    max-width: 1000px;
-    margin: 40px auto 80px;
-    padding: 0 20px;
-  }
-  /* Section Titles */
-  h2.section-title {
-    font-weight: 700;
-    font-size: 2.5rem;
-    color: #0616f3f1;
-    margin-bottom: 25px;
-    border-bottom: 3px solid #0f3460;
-    padding-bottom: 8px;
-  }
-  /* Hero Section */
-  .hero {
-    text-align: center;
-    margin-bottom: 60px;
-  }
-  .hero h1 {
-    font-size: 3rem;
-    margin: 0;
-    color: #0c061b;
-  }
-  .hero h3 {
-    font-weight: 500;
-    font-size: 1.5rem;
-    margin: 12px 0 24px;
-    color: #be09a0;
-  }
-  .hero p {
-    font-weight: 400;
-    font-size: 1.1rem;
-    max-width: 600px;
-    margin: 0 auto;
-    color: #2a1ceb;
-  }
-  /* About Section */
-  .about p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    max-width: 800px;
-    margin: 0 auto;
-    color: #3514c7e8;
-  }
-  /* Skills Section */
-  .skills-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 12px;
-    margin-top: 15px;
-  }
-  .skill-item {
-    background-color: #cee40bf1;
-    color: rgba(33, 10, 241, 0.932);
-    padding: 10px 20px;
-    font-weight: 500;
-    border-radius: 24px;
-    box-shadow: 0 4px 6px rgba(15,52,96,0.5);
-    font-size: 1rem;
-    user-select: none;
-  }
-  /* Experience Section */
-  .experience-list {
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  .job {
-    margin-bottom: 30px;
-  }
-  .job h3 {
-    margin: 0;
-    color: #0f3460;
-  }
-  .job span {
-    display: inline-block;
-    margin-top: 4px;
-    font-style: italic;
-    color: #555;
-    font-size: 0.9rem;
-  }
-  .job p {
-    margin-top: 8px;
-    font-size: 1rem;
-    color: #1438ad;
-  }
-  /* Projects Section */
-  .projects-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
-    gap: 28px;
-    max-width: 1000px;
-    margin: 0 auto;
-  }
-  .project {
-    background: rgb(219, 233, 20);
-    padding: 20px;
-    border-radius: 18px;
-    box-shadow: 0 6px 16px rgba(0,0,0,0.1);
-    transition: box-shadow 0.3s ease;
-  }
-  .project:hover {
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-  }
-  .project h4 {
-    margin: 0 0 10px 0;
-    color: #0f3460;
-    font-weight: 600;
-  }
-  .project p {
-    font-size: 1rem;
-    color: #b722f1;
-    line-height: 1.4;
-  }
-  .project a {
-    margin-top: 8px;
-    display: inline-block;
-    color: #16213e;
-    font-weight: 600;
-    text-decoration: none;
-    transition: color 0.25s ease;
-  }
-  .project a:hover {
-    color: #11e964;
-  }
-  /* Contact Section */
-  .contact {
-    max-width: 500px;
-    margin: 0 auto;
-    text-align:center;
-  }
-  .contact p {
-    margin: 8px 0;
-    font-size: 1.1rem;
-    color: #0b0ec5;
-  }
-  .contact a {
-    color: #33ec1b;
-    font-weight: 600;
-    text-decoration: none;
-    margin: 0 10px;
-    font-size: 1.5rem;
-    transition: color 0.3s ease;
-  }
-  .contact a:hover {
-    color: #24d613;
-  }
-  /* Footer */
-  footer {
-    text-align: center;
-    margin-bottom: 30px;
-    color: #122fd3;
+  @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+  :root {
+    --bg-color: #d1dfdd;
+    --btn-bg: #0b0e0b;
+    --btn-hover-bg: #cad80d;
+    --btn-active-bg: #e4e9ec;
+    --accent-color: lab(89.44% -2.01 -0.71);
+    --text-color: #e0e0e0;
+    --display-bg: #15c21d;
+    --display-text: hwb(192 86% 10%);
   }
 
-  /* Responsive */
-  @media (max-width: 480px) {
-    nav a {
-      margin: 0 10px;
-      font-size: 0.9rem;
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    font-family: 'Roboto Mono', monospace;
+    background: var(--bg-color);
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .calculator {
+    width: 320px;
+    background: var(--bg-color);
+    border-radius: 15px;
+    box-shadow:
+      0 8px 15px rgba(0, 0, 0, 0.4),
+      inset 0 -4px 8px rgba(32, 238, 49, 0.25);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .display {
+    background: var(--display-bg);
+    color: var(--display-text);
+    font-size: 2.25rem;
+    padding: 20px;
+    border-radius: 15px 15px 0 0;
+    text-align: right;
+    overflow-x: auto;
+    min-height: 60px;
+    user-select: none;
+  }
+
+  .buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    padding: 20px;
+  }
+
+  button {
+    background: var(--btn-bg);
+    border: none;
+    border-radius: 12px;
+    color: var(--text-color);
+    font-size: 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow:
+      0 4px 6px rgba(0,0,0,0.3),
+      inset 0 -2px 0 rgba(0,0,0,0.15);
+    transition:
+      background-color 0.25s ease,
+      transform 0.1s ease;
+    user-select: none;
+  }
+
+  button:hover {
+    background: var(--btn-hover-bg);
+  }
+
+  button:active {
+    background: var(--btn-active-bg);
+    transform: scale(0.95);
+    color: #ffffff;
+  }
+
+  button.operator {
+    color: var(--accent-color);
+    font-weight: 700;
+  }
+
+  button.span-two {
+    grid-column: span 2;
+  }
+
+  @media (max-width: 350px) {
+    .calculator {
+      width: 100%;
     }
-    .hero h1 {
-      font-size: 2.3rem;
+    .display {
+      font-size: 1.75rem;
+      padding: 15px;
     }
-    .hero h3 {
-      font-size: 1.1rem;
-    }
-    .skills-list {
-      justify-content: center;
-      gap: 10px;
+    button {
+      font-size: 1.25rem;
     }
   }
+
 </style>
 </head>
 <body>
-<nav aria-label="Primary navigation">
-  <a href="#about" class="active">About Me</a>
-  <a href="#skills">Skills</a>
-  <a href="#experience">Experience</a>
-  <a href="#projects">Projects</a>
-  <a href="#contact">Contact</a>
-</nav>
+  <div class="calculator" role="application" aria-label="Calculator">
+    <div id="display" class="display" aria-live="polite" aria-atomic="true">0</div>
+    <div class="buttons">
+      <button id="clear" aria-label="Clear" class="operator">C</button>
+      <button id="backspace" aria-label="Backspace">&larr;</button>
+      <button id="percent" aria-label="Percent">%</button>
+      <button data-operator="/" aria-label="Divide" class="operator">÷</button>
 
-<main class="container">
-  <section class="hero" id="hero" aria-label="Introduction">
-    <h1>HAMMAD ALI</h1>
-    <h3>Front-End Developer & Web Designer</h3>
-    <p>Welcome to my personal portfolio. I am passionate about creating beautiful and functional websites and applications with code.</p>
-  </section>
+      <button data-number="7" aria-label="7">7</button>
+      <button data-number="8" aria-label="8">8</button>
+      <button data-number="9" aria-label="9">9</button>
+      <button data-operator="*" aria-label="Multiply" class="operator">×</button>
 
-  <section id="about" aria-label="About Me" class="about">
-    <h2 class="section-title">About Me</h2>
-    <p>Hello! I'm Hammad Ali, a motivated front-end developer with a keen eye for clean and modern design. I have experience building responsive, user-friendly web applications using the latest HTML, CSS, and JavaScript technologies. I enjoy solving problems and learning new things every day.</p>
-  </section>
+      <button data-number="4" aria-label="4">4</button>
+      <button data-number="5" aria-label="5">5</button>
+      <button data-number="6" aria-label="6">6</button>
+      <button data-operator="-" aria-label="Subtract" class="operator">−</button>
 
-  <section id="skills" aria-label="Skills">
-    <h2 class="section-title">Skills</h2>
-    <div class="skills-list" aria-label="List of skills">
-      <div class="skill-item">HTML5</div>
-      <div class="skill-item">CSS3</div>
-      <div class="skill-item">JavaScript</div>
-      <div class="skill-item">React</div>
-      <div class="skill-item">Git</div>
-      <div class="skill-item">Responsive Design</div>
-      <div class="skill-item">Bootstrap</div>
+      <button data-number="1" aria-label="1">1</button>
+      <button data-number="2" aria-label="2">2</button>
+      <button data-number="3" aria-label="3">3</button>
+      <button data-operator="+" aria-label="Add" class="operator">+</button>
+
+      <button data-number="0" aria-label="0" class="span-two">0</button>
+      <button data-number="." aria-label="Decimal point">.</button>
+      <button id="equals" aria-label="Equals" class="operator">=</button>
     </div>
-  </section>
-
-  <section id="experience" aria-label="Experience">
-    <h2 class="section-title">Internships</h2>
-    <div class="experience-list">
-      <article class="job">
-        <h3>Front-End Developer</h3>
-        <span>Digital empowermenr Network — Aug 1 to Aug 31 2024 </span>
-        <p>Developed and maintained responsive web applications using Html CSS and Javascript. Collaborated with designers and backend developers to deliver engaging user experiences.</p>
-      </article>
-      <article class="job">
-        <h3> Web Developement</h3>
-        <span>XYZ Solutions — Sep 1 to Oct 19 2024 </span>
-        <p>Worked on building websites for clients using HTML, CSS, JavaScript, and PHP. Improved website accessibility and SEO for several projects.</p>
-      </article>
-    </div>
-  </section>
-
-  <section id="projects" aria-label="Projects">
-    <h2 class="section-title">Projects</h2>
-    <div class="projects-list">
-      <article class="project">
-        <h4>Portfolio Website</h4>
-        <p>A responsive portfolio website built with HTML, CSS, and vanilla JavaScript showcasing my projects and skills.</p>
-        <a href="https://your-portfolio-link.com" target="_blank" rel="noopener noreferrer"></a>
-      </article>
-      <article class="project">
-        <h4>E Commerse website</h4>
-        <p>A task management app built with React, featuring user authentication and local persistence.</p>
-        <a href="https://your-todo-app-link.com" target="_blank" rel="noopener noreferrer"></a>
-      </article>
-      <article class="project">
-        <h4>Weather Dashboard</h4>
-        <p>A weather forecast dashboard that fetches data from a public API and displays it with charts and icons.</p>
-        <a href="https://your-weather-app-link.com" target="_blank" rel="noopener noreferrer"></a>
-      </article>
-    </div>
-  </section>
-
-  <section id="contact" aria-label="Contact Me" class="contact">
-    <h2 class="section-title">Contact</h2>
-    <p>0333000000000</p>
-    <p>Email: <a href="mailto:your.email@example.com">hammad@gmail.com</a></p>
-    <div>
-
-      
-    </div>
-  </section>
-</main>
-
-<footer>
-  &copy; 2024 Your Name. All rights reserved.
-</footer>
+  </div>
 
 <script>
-  // Highlight the current section link in nav on scroll
-  const sections = document.querySelectorAll('main section');
-  const navLinks = document.querySelectorAll('nav a');
+  (function(){
+    const display = document.getElementById('display');
+    const buttons = document.querySelectorAll('.buttons button');
+    let currentInput = '0';
+    let previousInput = null;
+    let operator = null;
+    let lastPressedEquals = false;
 
-  window.addEventListener('scroll', () => {
-    let current = '';
-    sections.forEach(section => {
-      const sectionTop = section.offsetTop - 80;
-      if (pageYOffset >= sectionTop) {
-        current = section.getAttribute('id');
+    function updateDisplay() {
+      display.textContent = currentInput;
+    }
+
+    // Helper to safely evaluate expression with basic arithmetic
+    function calculate(a, b, op) {
+      a = parseFloat(a);
+      b = parseFloat(b);
+      if (isNaN(a) || isNaN(b)) return '0';
+      switch(op) {
+        case '+': return (a + b).toString();
+        case '-': return (a - b).toString();
+        case '*': return (a * b).toString();
+        case '/': 
+          if (b === 0) return 'Error';
+          return (a / b).toString();
+        default: return '0';
+      }
+    }
+
+    function clearAll() {
+      currentInput = '0';
+      previousInput = null;
+      operator = null;
+      lastPressedEquals = false;
+      updateDisplay();
+    }
+
+    function backspace() {
+      if (lastPressedEquals) {
+        clearAll();
+        return;
+      }
+      if (currentInput.length === 1) {
+        currentInput = '0';
+      } else {
+        currentInput = currentInput.slice(0, -1);
+        if (currentInput === '-' || currentInput === '-0') {
+          currentInput = '0';
+        }
+      }
+      updateDisplay();
+    }
+
+    function appendNumber(num) {
+      if (lastPressedEquals) {
+        currentInput = '0';
+        lastPressedEquals = false;
+      }
+      if (currentInput === '0' && num !== '.') {
+        currentInput = num;
+      } else if (num === '.') {
+        if (!currentInput.includes('.')) {
+          currentInput += '.';
+        }
+      } else {
+        currentInput += num;
+      }
+      updateDisplay();
+    }
+
+    function chooseOperator(op) {
+      if (operator !== null && !lastPressedEquals) {
+        // Calculate intermediate result before updating operator
+        if (currentInput !== '') {
+          let result = calculate(previousInput, currentInput, operator);
+          if (result === 'Error') {
+            currentInput = 'Error';
+            previousInput = null;
+            operator = null;
+            lastPressedEquals = true;
+            updateDisplay();
+            return;
+          }
+          previousInput = result;
+          currentInput = '';
+        }
+      } else if (!lastPressedEquals) {
+        previousInput = currentInput;
+        currentInput = '';
+      }
+      operator = op;
+      lastPressedEquals = false;
+    }
+
+    function compute() {
+      if (operator === null || lastPressedEquals) return;
+      if (currentInput === '') return;
+      let result = calculate(previousInput, currentInput, operator);
+      if (result === 'Error') {
+        currentInput = 'Error';
+      } else {
+        currentInput = result;
+      }
+      previousInput = null;
+      operator = null;
+      lastPressedEquals = true;
+      updateDisplay();
+    }
+
+    function percent() {
+      if (currentInput === '' || currentInput === 'Error') return;
+      let value = parseFloat(currentInput);
+      if (isNaN(value)) return;
+      value = value / 100;
+      currentInput = value.toString();
+      updateDisplay();
+    }
+
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        if (button.hasAttribute('data-number')) {
+          appendNumber(button.getAttribute('data-number'));
+        }
+        else if (button.hasAttribute('data-operator')) {
+          chooseOperator(button.getAttribute('data-operator'));
+        } else if (button.id === 'clear') {
+          clearAll();
+        } else if (button.id === 'equals') {
+          compute();
+        } else if (button.id === 'backspace') {
+          backspace();
+        } else if (button.id === 'percent') {
+          percent();
+        }
+      });
+    });
+
+    // Keyboard support
+    document.addEventListener('keydown', (e) => {
+      if ((e.key >= '0' && e.key <= '9') || e.key === '.') {
+        e.preventDefault();
+        appendNumber(e.key);
+      } else if (e.key === '+' || e.key === '-' || e.key === '*' || e.key === '/') {
+        e.preventDefault();
+        chooseOperator(e.key);
+      } else if (e.key === 'Enter' || e.key === '=') {
+        e.preventDefault();
+        compute();
+      } else if (e.key === 'Backspace') {
+        e.preventDefault();
+        backspace();
+      } else if (e.key.toLowerCase() === 'c') {
+        e.preventDefault();
+        clearAll();
+      } else if (e.key === '%') {
+        e.preventDefault();
+        percent();
       }
     });
-    navLinks.forEach(link => {
-      link.classList.remove('active');
-      if (link.getAttribute('href') === '#' + current) {
-        link.classList.add('active');
-      }
-    });
-  });
+
+    updateDisplay();
+
+  })();
 </script>
 </body>
 </html>
